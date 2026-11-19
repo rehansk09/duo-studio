@@ -32,7 +32,7 @@ body {
 }
 
 #main {
-  background-color: #0e0e0e;
+  background-color: #0f0d0f;
 }
 
 .page1 {
@@ -79,6 +79,10 @@ body {
 
 #nav-part1 h4:nth-child(1) {
   border-bottom: 1.5px solid #fff;
+}
+
+.hero-text {
+  width: fit-content;
 }
 
 .page1 h1 {
@@ -211,16 +215,18 @@ body {
 .page3 .extra-project h2 {
   font-family: "PP Mori";
   font-size: 2.9vw;
-  font-weight: 800;
+  font-weight: 900;
+  color: #fff;
 }
 
 .page3 .extra-project .btn {
-  height: 7rem;
-  width: 7rem;
+  height: 7.1rem;
+  width: 7.1rem;
   border-radius: 50%;
   border: none;
   margin-right: 150px;
   background-color: #d95af076;
+  color: #fff;
   font-size: 12px;
 }
 
@@ -228,5 +234,58 @@ body {
   min-height: 100vh;
   width: 100%;
   position: relative;
-  padding-top: 100px;
+  padding: 200px 100px;
+}
+
+.elem {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.elem img {
+  width: 28%;
+  position: absolute;
+  opacity: 0;
+  transition: all ease-out 0.2s;
+  transform: translateY(10%) rotate(2deg);
+}
+
+.elem img:nth-child(1) {
+  left: 2%;
+}
+
+.elem img:nth-child(3) {
+  right: 3%;
+}
+
+.text-div {
+  height: 16vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.elem h1 {
+  font-size: 6.6vw;
+  font-weight: 500;
+  transition: all ease-out 0.5s;
+  color: #dfdfdfe4;
+}
+
+.elem:hover h1 {
+  transform: translateY(-100%);
+  color: #ebdfff;
+}
+
+.elem:hover img {
+  opacity: 1;
+  transform: translateY(0%) rotate(0deg);
+}
+
+.page5 {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
 }

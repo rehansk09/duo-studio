@@ -113,11 +113,45 @@ let tl2 = gsap.timeline({
     trigger: ".page1 h1",
     scroller: "#main",
     start: "top -115%",
-    end: "top -120",
+    end: "top -120%",
     scrub: 3,
   },
 });
 
 tl2.to("#main", {
   backgroundColor: "white",
+});
+
+let heroTextTl = gsap.timeline({ delay: 0.3 });
+
+heroTextTl.from(".page1 h1", {
+  opacity: 0,
+  x: "-100",
+  duration: 2.2,
+  ease: "power2.out",
+});
+
+heroTextTl.from(
+  ".page1 h2",
+  {
+    opacity: 0,
+    x: "100",
+    duration: 2.2,
+    ease: "power2.out",
+  },
+  "-=1.2",
+);
+
+let tl3 = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".page1 h1",
+    scroller: "#main",
+    start: "top -300%",
+    end: "top -380%",
+    scrub: 3,
+  },
+});
+
+tl3.to("#main", {
+  backgroundColor: "#0f0d0f",
 });
