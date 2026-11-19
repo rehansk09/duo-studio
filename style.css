@@ -1,15 +1,17 @@
 @font-face {
   font-family: "Astroz";
-  src: url("Astroz Trial.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
+  src: url("./assets/astroz-trial.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "PP Mori";
+  src: url("./assets/ppmori-extralight.otf") format("opentype");
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: white;
 }
 
 html,
@@ -18,12 +20,23 @@ body {
   height: 100%;
 }
 
+#cursor {
+  height: 20px;
+  width: 20px;
+  position: fixed;
+  border-radius: 50%;
+  background-color: #ebdfff;
+  z-index: 999;
+  mix-blend-mode: difference;
+  pointer-events: none;
+}
+
 #main {
   background-color: #0e0e0e;
 }
 
 .page1 {
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
 }
 
@@ -61,8 +74,159 @@ body {
   font-weight: 300;
   text-transform: uppercase;
   cursor: pointer;
+  color: white;
 }
 
 #nav-part1 h4:nth-child(1) {
   border-bottom: 1.5px solid #fff;
+}
+
+.page1 h1 {
+  font-size: 7vw;
+  font-family: "PP Mori";
+  font-weight: 600;
+  margin-top: 10vw;
+  margin-left: 6vw;
+  color: white;
+}
+
+.page1 h2 {
+  font-size: 7vw;
+  font-family: "PP Mori";
+  font-weight: 600;
+  margin-left: 25vw;
+  color: whitesmoke;
+}
+
+.page1 video {
+  width: 60%;
+  margin-top: 10vw;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.page2 {
+  min-height: 100vh;
+  width: 100%;
+  padding: 100px 5vw;
+  border-bottom: 2px solid #6c6c6c;
+}
+
+.page2 h1 {
+  font-family: "Astroz", sans-serif;
+  font-weight: 300;
+  font-size: 5vw;
+}
+
+.page2-container {
+  height: 60vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.page2-left {
+  width: 28%;
+}
+
+.page2-right {
+  width: 24%;
+}
+
+.page2-left h2 {
+  font-family: "PP Mori";
+  font-size: 2.9vw;
+  font-weight: 800;
+  margin-left: 18px;
+}
+
+.page2-right p {
+  font-family: "PP Mori";
+  font-size: 28px;
+}
+
+.page2-right button {
+  width: 100%;
+  border-radius: 50px;
+  border: none;
+  padding: 4px 0;
+  background-color: #ebdfff;
+  color: #000;
+  margin-top: 20px;
+  transition: all 0.5s;
+}
+
+.page2-right button:hover {
+  background-color: #000;
+  color: #ebdfff;
+}
+
+.page3 {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  padding-top: 100px;
+  border-bottom: 2px solid #6c6c6c;
+}
+
+.page3 h1 {
+  font-family: "PP Mori";
+  font-size: 5vw;
+  font-weight: 800;
+  color: #111;
+  margin-left: 100px;
+}
+
+.page3-part1 {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+  padding: 0px 100px;
+  gap: 100px;
+}
+
+.page3-part1 img {
+  height: 400px;
+  margin-top: 160px;
+}
+
+.page3-part1 video {
+  height: 550px;
+}
+
+.page3-part1 .video1 {
+  margin-top: 100px;
+  height: 500px;
+}
+
+.page3 .extra-project {
+  padding: 130px 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.page3 .extra-project h2 {
+  font-family: "PP Mori";
+  font-size: 2.9vw;
+  font-weight: 800;
+}
+
+.page3 .extra-project .btn {
+  height: 7rem;
+  width: 7rem;
+  border-radius: 50%;
+  border: none;
+  margin-right: 150px;
+  background-color: #d95af076;
+  font-size: 12px;
+}
+
+.page4 {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  padding-top: 100px;
 }
